@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 함수를 전달, 반환할 수 있다.
+        // 2. 함수는 객체다.. 사실 다 객체다..
+        // - 객체는 reference 변수로 다룬다.
+        var obj = { // 중갈호로 이렇게 아래 만드는것은 일시적으로 만들기 위함
+            nick : 'mario',
+            phone : '1010-2020',
+            // scope function
+            print : function(){
+                console.log( this.nick, this.phone); // 필드에 접근하기 위해선 this.를 사용해야 한다.
+            }
+        };
+        // 이름() <-- 함수 호출 이라고 한다. JS에서 즉 ()를 붙인다는 것은 '함수'일때만 가능
+
+        // 인스턴스변수를 확인 하겠다
+        var obj2 = obj; // reference copy 복사를 한다는 말 : 참조를 복사한다.
+        obj2.nick = 'william';
+        obj.print();
+
+        console.log(obj);
+        obj.print();
+        obj.address = 'busan dong 19';
+        console.log(obj);
+
+        // function use like class
+        var Book = function(){  // function 
+            console.log('Book');
+            this.title = 'javascript'  // class로 사용하려면 인스턴스 변수로 사용해야 한다.
+            this.print = function(){   // function을 이용하여 객체를 만드는 작업
+                console.log(this.title);
+            }
+        }
+        // prototype : 메서드 정리를 할때 따로 분류 한다. 공통된 것들을 따로 분리
+        Book.prototype.print = function(){
+            console.log(this.title);
+        }
+        var book1 = new Book(); // return
+        var book2 = new Book(); // new는 객체를 생성해야 한다는 명령 즉 constructor(=생성자)
+        console.log( book1 );
+        console.log( book2 );
+        book1.print();
+        // setter
+        book2.title = 'python';
+        book1.print();
+        book2.print();
+
+        // ES6
+        class Member{ 
+            constructor(){
+                this.title = 'instance of Member';
+            }
+
+        }
+        var user = new Member();
+        console.log( user );
+        user.title = 'member in site';
+        console.log( user );
+
+
+        // insance
+    </script>
+</body>
+</html>

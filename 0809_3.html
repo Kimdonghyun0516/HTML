@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR.VR.Project</title>
+    <!-- <style>
+        a {  /* <a> 즉 엥커 스타일을 설정 */
+            color: green;
+        }
+        article {
+            color: red;
+            width: 240px;
+            height: 120px;  /*' 240x120 ' 영역을 엥커로 건 상황 */
+        }
+    </style>  -->
+    <style>
+        header{
+            border: 1px solid rgb(255, 0, 0);
+            margin: auto;  /* 여백을 알아서 나눠라 즉, 기본 정렬을 가운데로 하기 때문에 width 80% 기 때문에 왼쪽 10% 오른족10% 으로 해서 양쪽 여백을 나눠서 가운데 정렬을 한다.*/
+            padding: 12px; 
+            width: 80%;  /* 전체대비 80%만 여백을 만들었다 */
+        }
+        footer{
+            clear: both;  /* footer의 역할 다시 보기!!!!!!!!!!!!. */
+        }
+        .product {
+            /* display: none;  ->  none은 화면상에 보이지 않게 할수 있음 block은 화면사에 보이게 할수 있음 */
+            border: 1px solid blue;
+            display: block; /* block, inline, inline-block 이 3개를 가장 많이 사용 */
+            width: 398px;
+            float: left; /* 어느 기준점 배치를 할것이냐? 그래서 float: left를 걸면 왼쪽에서 오른족으로 나열하게 보인다. */
+            
+        }
+        #product-wrapper{ /* # 아이디 값 */
+            border: 1px solid violet;
+            width: 800px;
+            height: 80px;
+            margin: auto;
+            overflow: hidden; /* overflow: hidden -> 이용하면 지금 영역을 width와 height으로 설정했기 때문에 이값 안에서만 보여진다.  */
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        HEADER
+        <nav>
+            <ul>
+                <li>Home</li> 
+                <li><a href="Overview.html">Overview</a></li>  <!-- <a> 엥커를 이용해서 클릭할수 있도록 만들수 있다. 텍스트에 엥커를 건 상황 -->
+                <li><a href="ChangeLog.html">ChangeLog</a></li>
+                <li>Tech spec</li>
+                <li>Demo</li>
+            </ul>
+        </nav>  
+        <img src="images/kakao.png" alt="">      <!--  <img src="이미지" alt="안보이면 text 형으로 보이게 하는 부분"> -->
+    </header> 
+ 
+    <section>
+        <a href="project.html"><article>project Overview</article></a> <!-- <a> 엥커를 이용해서 클릭할수 있도록 만들수 있다. article 요소에 엥커를 건 상황 -->
+        <article>team member</article>
+        <article>thanks a lot</article>
+    </section>
+    <section id="product-wrapper">
+        <article class="product">
+            CSB-2000S 제품특징
+            스피커의 결합 및 분리가 가능하여 두 가지 형태로 사용할 수 있습니다.
+        </article>
+        <article class="product">
+            CSB-2000S 부분 명칭 및 사용방법
+            (1) 전원 겸용 볼륨 조절
+            (2) 파워LED
+            (3) 셀렉트버튼
+            (4) 헤드폰 단자
+            (5) 마이크 단자
+        </article>
+        <article class="product">
+            CSB-2000S 사용법
+            1. 스탠드타이븡로는 메인 스피커를 우측, 서브 스피커를 좌측으로 설치하시고
+        </article>
+    </section>
+
+    <footer>
+        법에따라 작성할 내용이 있음
+    </footer>
+
+    <footer></footer>
+
+</body>
+</html>

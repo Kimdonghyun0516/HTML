@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var scores = [10,50,20,90];
+        for(let i=0; i<scores.length; i+=1){
+            console.log( scores[i] );
+        }
+        var student = { name:'mario', major:'mechanic'};
+        console.log( student.name, student.major);
+        // key-value
+        console.log( student['name'], student['major']); // 대괄호 안에 string으로 
+        var tutor = [{name:'jang'},{name:'kims'},{name:'park'}] // JS에서 [] 는 배열
+        console.log( tutor[0]['name'] );
+        console.log( tutor[0].name );
+
+        // 4. JSON (내장 객체)
+        const json = '{"result": true, "count":42 }'; // string  ' " 
+        // string to object
+        const jsonObj = JSON.parse(json);
+        console.log(json);
+        console.log(jsonObj);
+
+        // object to string
+        const pos = { x:5, y:12};
+        const jsonPos = JSON.stringify(pos); 
+        console.log( jsonPos );
+
+    </script>
+</body>
+</html>
